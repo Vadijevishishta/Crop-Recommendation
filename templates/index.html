@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="/static/logo.png" alt="Govt Logo" class="logo">
+    <h1>Crop Recommendation System</h1>
+    <p>Government Agriculture Decision Support System</p>
+</header>
+
+<!-- MOVING QUOTES -->
+<div class="quotes-wrapper">
+    <div class="quotes">
+        🌱 Agriculture is the backbone of our nation &nbsp;&nbsp;|&nbsp;&nbsp;
+        🌾 Healthy soil leads to healthy crops and a healthy future &nbsp;&nbsp;|&nbsp;&nbsp;
+        🚜 Empowering farmers with smart technology
+    </div>
+</div>
+
+<!-- INPUT CARD -->
+<div class="card">
+    <h2>Enter Soil & Location Details</h2>
+
+    <div class="inputs">
+        <input type="number" id="N" placeholder="Nitrogen (N)">
+        <input type="number" id="P" placeholder="Phosphorus (P)">
+        <input type="number" id="K" placeholder="Potassium (K)">
+        <input type="number" id="SOIL_PH" placeholder="Soil pH">
+        <input type="number" id="lat" placeholder="Latitude">
+        <input type="number" id="lon" placeholder="Longitude">
+    </div>
+
+    <button onclick="predict()">Predict Crop</button>
+</div>
+
+<!-- RESULT -->
+<div id="result" class="result-box"></div>
+
+<!-- GRAPH -->
+<div class="chart-container">
+    <canvas id="xaiChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/static/script.js"></script>
+
+</body>
+</html>
